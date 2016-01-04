@@ -1,6 +1,6 @@
-<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>org/ueditor1/ueditor.config.js"></script>
-<script type="text/javascript"  charset="utf-8" src="<?php echo base_url() ?>org/ueditor1/ueditor.all.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>org/ueditor1/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>org/ueditor/ueditor.config.js"></script>
+<script type="text/javascript"  charset="utf-8" src="<?php echo base_url() ?>org/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>org/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
          window.UEDITOR_HOME_URL="<?php echo base_url() ?>org/ueditor1/";
          window.onload=function(){
