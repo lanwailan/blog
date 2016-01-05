@@ -114,9 +114,10 @@ class Article extends MY_Controller {
 
 		if($status){
 			$title=$this->input->post('title');
-			$content=$this->input->post('content');
+			$content=$this->input->post('content',FALSE);
 			$excerpt=$this->input->post('excerpt');
             $sortid=$this->input->post('sortid');
+            
 			$data=array(
                 'title'=>$title,
                 'date'=>time(),
@@ -124,8 +125,9 @@ class Article extends MY_Controller {
                 'excerpt'=>$excerpt,
                 'author'=>'jesscia',
                 'sortid'=>$sortid,
-                'thumb'=>$info['file_name']
+                'thumb'=>$info['file_name'],
 				);
+            //p($data);die;
 			$this->art->add($data);
 			success('article/index','发表成功!>>>>>>>>跳转到查看文章页面');
 
