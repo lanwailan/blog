@@ -39,9 +39,9 @@ class Login extends CI_Controller {
         	session_start();
         }
 		$_SESSION['code']=$capt['word'];
-
-		$this->load->view('admin/login',$data);
-		p(md5('lanwailan'));
+       
+		$this->load->view('admin/login.html',$data);
+		
    }
 
 

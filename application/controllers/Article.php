@@ -18,7 +18,7 @@ class Article extends MY_Controller {
 		//$this->output->enable_profiler(TRUE); 
 		$data['sort']=$this->cate->check();
         //配置项设置
-         $perpage=3;
+         $perpage=5;
          $config['base_url']=site_url('article/index');
          $config['total_rows']=$this->db->count_all_results('blog');
          $config['per_page']=$perpage;
@@ -41,7 +41,7 @@ class Article extends MY_Controller {
         $data['article']=$this->art->article_category();
        // p($data);die;
         $this->load->view('admin/header',$data);
-        $this->load->view('admin/check_article');
+        $this->load->view('admin/article.html');
         $this->load->view('admin/footer');
 
 	}
@@ -49,11 +49,11 @@ class Article extends MY_Controller {
 	/**
 	 * 发表文章模版显示
 	 */
-	public function send_article(){
+	public function add_article(){
 
         $data['sort']=$this->cate->check();
         $this->load->view('admin/header',$data);
-		$this->load->view('admin/article');
+		$this->load->view('admin/add_article.html');
 		$this->load->view('admin/footer');
 	}
 
@@ -61,9 +61,10 @@ class Article extends MY_Controller {
 	 * 发表文章动作
 	 */
 
-	public function send(){
+	public function add(){
 
 		//文件上传配置
+        $this->output->enable_profiler(TRUE); 
         $config['upload_path']='./uploads/';
         $config['allowed_types']='gif|jpg|png|jpeg|JPEG|JPG|GIF';
         $config['max_size']='1000';
@@ -73,11 +74,12 @@ class Article extends MY_Controller {
 
         //载入上传类
          $this->load->library('upload',$config);
-         $this->upload->initialize($config);
-         $status=$this->upload->do_upload('thumb');
-
+        $this->upload->initialize($config);
+        //执行
+        $status=$this->upload->do_upload('thumb');
+        
         if(!$status){
-           error('请上传特色图片');
+          error('必须上传图片');
         }
 
         $wrong=$this->upload->display_errors();
@@ -117,13 +119,13 @@ class Article extends MY_Controller {
 			$content=$this->input->post('content',FALSE);
 			$excerpt=$this->input->post('excerpt');
             $sortid=$this->input->post('sortid');
-            
+            $author=$this->session->userdata('username');
 			$data=array(
                 'title'=>$title,
                 'date'=>time(),
                 'content'=>$content,
                 'excerpt'=>$excerpt,
-                'author'=>'jesscia',
+                'author'=>$author,
                 'sortid'=>$sortid,
                 'thumb'=>$info['file_name'],
 				);
@@ -133,7 +135,7 @@ class Article extends MY_Controller {
 
 		}else {
             $this->load->view('admin/header');
-		    $this->load->view('admin/article');
+		    $this->load->view('admin/article.html');
 		    $this->load->view('admin/footer');
 		}
 		

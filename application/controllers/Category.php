@@ -14,7 +14,7 @@ class Category extends MY_Controller {
 
 		$data['sort']=$this->cate->check();
 		$this->load->view('admin/header',$data);
-		$this->load->view('admin/sort');
+		$this->load->view('admin/category.html');
 		$this->load->view('admin/footer');
 	}
 
@@ -25,9 +25,8 @@ class Category extends MY_Controller {
      public function add_cate(){
 
      	//$this->output->enable_profiler(TRUE);
-     	$data['sort']=$this->cate->check();
-     	$this->load->view('admin/header',$data);
-     	$this->load->view('admin/add_cate');
+     	$this->load->view('admin/header');
+     	$this->load->view('admin/add_category.html');
      	$this->load->view('admin/footer');
      }
 
@@ -63,7 +62,7 @@ class Category extends MY_Controller {
         $data['check_cate']=$this->cate->check_cate($sid);
      	$data['sort']=$this->cate->check();
      	$this->load->view('admin/header',$data);
-     	$this->load->view('admin/edit_cate');
+     	$this->load->view('admin/edit_category.html');
      	$this->load->view('admin/footer');
      }
 
