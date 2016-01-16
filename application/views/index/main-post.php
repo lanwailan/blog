@@ -8,7 +8,7 @@
                     <div class="post-head">
                         <h1 class="post-title"><a href="<?php echo site_url('home/article').'/'.$v['gid'] ?>"><?php echo $v['title'] ?></a></h1>
                         <div class="post-meta">
-                            <span class="author">作者：lanwailan<?php echo $v['author'] ?><a href="#"></a></span>|
+                            <span class="author">作者:<?php echo $v['username'] ?><a href="#"></a></span>|
                             <time class="post-date" datetime="2015年12月22日星期二凌晨3点58分" title="2015年12月22日期二凌晨3点58分"><?php echo date('Y-m-d',$v['date']) ?></time>
                         </div>
                     </div>
@@ -29,3 +29,4 @@
                 </article>
             <?php endforeach ?>
             </main>
+

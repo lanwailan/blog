@@ -5,7 +5,10 @@ class Admin extends MY_Controller {
 
 	public function index(){
 
-		$this->load->view('admin/header');
+        $data['comment_count']=$this->db->count_all_results('comment');
+        $data['article_count']=$this->db->count_all_results('blog');
+
+		$this->load->view('admin/header',$data);
 		$this->load->view('admin/index.html');
 		$this->load->view('admin/footer');
 	}

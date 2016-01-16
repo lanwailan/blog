@@ -35,6 +35,14 @@ $config =array(
         	'label'=>'分类详细描述',
             'rules'=>'max_length[144]'
         	)
-	)
+	),
+	'comments'=>array(
+		array(
+			'field'=>'comment',
+			'label'=>'评论',
+			'rules'=>'required|maxlength[144]'
+			)
+
+		)
 	
 );

@@ -92,7 +92,7 @@ class Login extends CI_Controller {
 	 */
 
 	public function login_out(){
-
+        $this->session->unset_userdata('uid');
 		$this->session->sess_destroy();
 		success('login/index','退出成功！');
 	}

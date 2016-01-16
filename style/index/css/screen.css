@@ -92,7 +92,10 @@ textarea:focus {
   outline: none;
 }
 blockquote {
-  border-left: 4px solid #f4645f;
+    padding: 6px 25px !important;
+    margin: 0 0 17px !important;
+    font-size: 14.5px !important;
+    border-left: 5px solid #1ABC9C !important;
 }
 pre {
   padding: 0;
@@ -313,6 +316,8 @@ pre {
   color:#303030;
   background:#16A085;
 }
+
+
 
 
 .copyright {

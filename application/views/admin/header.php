@@ -122,7 +122,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-comments fa-fw"></i> Comments</a>
+                            <a href="<?php echo site_url('article/comment_show') ?>"><i class="fa fa-comments fa-fw"></i> Comments</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-align-justify fa-fw"></i> Manager Category<span class="fa arrow"></span></a>

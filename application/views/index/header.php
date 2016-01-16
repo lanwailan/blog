@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Lanwailan- web 学习个人博客</title>
     <meta name="description" content="Lanwailan- web 学习个人博客" />
-    <meta name="keywords" content="Laravel中文社区,php框架,laravel中文网,php framework,restful routing,laravel,laravel php">
+    <meta name="keywords" content="Codeigniter中文社区,php框架,Codeigniter中文网,php framework,CI,Codeigniter,Codeigniter 教程">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'style/index/'?>css/screen.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'org/simditor/styles/' ?>simditor.css">
     <!-- Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="<?php echo base_url() . 'style/index/'?>css/bootstrap.min.css">
 </head>
@@ -49,9 +50,9 @@
                           <li role="presentation"><a href="http://lanwailan.com/index.php/home/category/6">Learning</a></li>
                           <li role="presentation"><a href="http://lanwailan.com/index.php/home/category/4 ">CI</a></li>
                           <li role="presentation"><a href="http://lanwailan.com/index.php/home/category/5">Essay</a></li>
-                          <li role="presentation"><a href="#">About</a></li>
-                          <li role="presentation"><a href="http://cloudskysoft.com/">Bro</a></li>
-                          <li role="presentation"><a href="http://dongyi.link">DongYi</a></li> 
+                          
+                          <li role="presentation"><a href="http://cloudskysoft.com/">C Blog</a></li>
+                         
                        </ul>
                     </div>
                 </nav>

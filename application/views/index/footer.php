@@ -49,7 +49,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <span>@Power By DongYi.lan--<a href="http://www.lanwailan.com/">蓝外蓝博客</a></span>
+                    <span>@Power By DongYi.lan--<a href="http://www.lanwailan.com/">蓝外蓝博客</a>|<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253650949'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1253650949' type='text/javascript'%3E%3C/script%3E"));</script></span>
                 </div>
             </div>
         </div>
@@ -58,5 +58,6 @@
 <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="<?php echo base_url() . 'style/index/'?>js/bootstrap.min.js"></script>   
+
 </body>
 </html>
