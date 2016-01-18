@@ -8,7 +8,7 @@ class Api_model extends CI_Model{
 		 $ch = curl_init();
          $url = 'http://apis.baidu.com/apistore/mobilenumber/mobilenumber?phone='.$num;
          $header = array(
-           'apikey: 6883d14f597d233a87bf086e11b953d6',
+           'apikey: **********************',
          );
          // 添加apikey到header
         curl_setopt($ch, CURLOPT_HTTPHEADER  , $header);
